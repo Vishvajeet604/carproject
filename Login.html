@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Mahindra Auto - Login / Registration</title>
+    
+     <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Faustina:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Instrument+Serif:ital@0;1&family=Martel:wght@200;30OTH;
+    rel=" stylesheet">
+
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Instrument Serif",
+            serif;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Instrument Serif",
+            serif;
+            font-weight: 400;
+            font-style: Bold;
+        }
+        
+
+
+        /* HEADER */
+
+        header {
+            height: 70px;
+            background-color: #080808;
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo img {
+            width: 50px;
+        }
+
+        #menu ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #menu ul li {
+            list-style-type: none;
+        }
+
+        #menu ul li a {
+            color: white;
+            text-decoration:none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #menu ul li a:hover {
+            color: red;
+        }
+
+
+        /* MAIN */
+
+        main {
+            min-height: 650px;
+            background-color: #f3f3f3;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px;
+        }
+
+
+        /* LOGIN REGISTRATION CONTAINER */
+
+        .account_container {
+            width: 1000px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background-color: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0px 3px 12px gray;
+
+            overflow: hidden;
+        }
+
+
+        /* LEFT SIDE */
+
+        .left_side {
+            background-color: #6b1414;
+
+            color: white;
+
+            padding: 50px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left_side h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .left_side h1 span {
+            color: red;
+        }
+
+        .left_side h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .left_side p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+
+        .left_side img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+
+        /* RIGHT SIDE */
+
+        .right_side {
+            padding: 40px;
+        }
+
+        .right_side h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+
+        /* FORM */
+
+        .form_group {
+            margin-bottom: 17px;
+        }
+
+        .form_group label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+        }
+
+        .form_group input {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #cccccc;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+        }
+
+        .form_group input:focus {
+            border: 1px solid red;
+
+            outline: none;
+        }
+
+
+        /* LOGIN BUTTON */
+
+        .login_button {
+            width: 100%;
+
+            padding: 13px;
+
+            background-color: red;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .login_button:hover {
+            background-color: black;
+        }
+
+
+        /* REGISTER */
+
+        .register_text {
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 13px;
+        }
+
+        .register_text a {
+            color: red;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        /* DIVIDER */
+
+        .divider {
+            display: flex;
+
+            align-items: center;
+
+            margin: 20px 0;
+
+            gap: 10px;
+        }
+
+        .divider hr {
+            width: 100%;
+
+            border: none;
+
+            border-top: 1px solid #dddddd;
+        }
+
+        .divider p {
+            font-size: 12px;
+
+            color: gray;
+        }
+
+
+        /* REGISTRATION */
+
+        .registration_title {
+            font-size: 18px;
+
+            margin-bottom: 15px;
+
+            text-align: center;
+        }
+
+        .register_button {
+            width: 100%;
+
+            padding: 12px;
+
+            background-color: white;
+
+            color: red;
+
+            border: 1px solid red;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .register_button:hover {
+            background-color: red;
+
+            color: white;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #090a0d;
+
+            color: white;
+
+            padding: 25px;
+
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 12px;
+
+            color: #aaaaaa;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <nav>
+
+
+            <!-- LOGO -->
+
+            <div id="logo">
+
+                <a href="frontend.html">
+
+                    <img src="logo2.png"
+                        alt="Mahindra Logo">
+
+                </a>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <div id="menu">
+
+                <ul>
+
+                    <li>
+                        <a href="">
+                            HOME
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            SUVS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            ELECTRIC
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            EXPLORE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            SERVICE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            LOGIN / REGISTER
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <div class="account_container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="left_side">
+
+                <h1>
+                    Mahindra
+                    <span>Auto</span>
+                </h1>
+
+                <h2>
+                    Welcome to Mahindra Auto
+                </h2>
+
+                <p>
+                    Login or create your account to
+                    explore vehicles, save your favourite
+                    cars, book test drives and manage
+                    your bookings and services.
+                </p>
+
+
+                <img src="Black Scorpio N.jpg"
+                    alt="Scorpio N">
+
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="right_side">
+
+
+                <h2>
+                    Login
+                </h2>
+
+
+                <!-- LOGIN FORM -->
+
+                <form>
+
+
+                    <div class="form_group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form_group">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            placeholder="Enter your password"
+                            required>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="login_button">
+
+                        LOGIN
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+
+                    <hr>
+
+                    <p>OR</p>
+
+                    <hr>
+
+                </div>
+
+
+
+                <!-- REGISTRATION -->
+
+                <h3 class="registration_title">
+
+                    New to Mahindra Auto?
+
+                </h3>
+
+
+                <div class="form_group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your full name">
+
+                </div>
+
+
+
+                <div class="form_group">
+
+                    <label>
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter mobile number">
+
+                </div>
+
+
+
+                <div class="form_group">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email">
+
+                </div>
+
+
+
+                <div class="form_group">
+
+                    <label>
+                        Create Password
+                    </label>
+
+                    <input
+                        type="password"
+                        placeholder="Create your password">
+
+                </div>
+
+
+
+                <button
+                    class="register_button">
+
+                    CREATE ACCOUNT
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Mahindra Auto.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
